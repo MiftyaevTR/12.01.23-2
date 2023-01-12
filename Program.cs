@@ -37,3 +37,32 @@ int number=Convert.ToInt32(Console.ReadLine());
 int result = GetSum(number);
 Console.WriteLine(result);
 */
+// Задача 29: Напишите программу, которая задаёт массив из m элементов и выводит их на экран.
+
+int[ ] CreateArray (int size)
+{
+    int [ ] array= new int[size];
+    for (int i=0; i<size; i++)
+    {
+        Console.Write($"Просьба ввести элемент номер {i} - ");
+        int elements=Convert.ToInt32(Console.ReadLine());
+        array[i]=elements;
+    }
+    return array;
+}
+
+void ShowArray ( int [] array)
+{
+    for (int i=0; i<array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+    Console.WriteLine();
+}
+
+Console.WriteLine("Укажите размер массива: ");
+int m =Convert.ToInt32(Console.ReadLine());
+
+int [] newArray = CreateArray(m);
+ShowArray(newArray);
+
